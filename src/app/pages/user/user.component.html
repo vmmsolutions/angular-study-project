@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div fxLayout="row" fxLayoutGap="10px">
+  
+      <mat-form-field fxFlex>
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="user.firstName" required/>
+      </mat-form-field>
+  
+      <mat-form-field fxFlex>
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="user.lastName" required/>
+      </mat-form-field>
+  
+    </div>
+  
+    <div fxLayout="row" fxLayoutGap="10px">
+      <app-dropdown fxFlex [data]="selectedData"></app-dropdown>
+   
+      <mat-form-field fxFlex>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [(ngModel)]="user.email" required>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row">
+      <mat-form-field fxFlex>
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row">
+  
+    </div>
+  
+    <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
+      <button mat-raised-button style="background-color: #2e7d32; color: white"(click)="successSnackBar()" class="">Success</button>
+      <button mat-raised-button color="warn" (click)="errorSnackBar()">Error</button>
+      <button mat-raised-button color="primary" (click)="infoSnackBar()">Info</button>
+    </div>
+  
+  </div>
+  

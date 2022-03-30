@@ -1,0 +1,10 @@
+<div *ngIf="data">
+  <mat-form-field fxFlex>
+    <mat-label>{{data.title}}</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let item of data.items" [value]="item.id">
+        {{item.title}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

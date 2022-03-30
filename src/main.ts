@@ -9,4 +9,5 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
+  /* eslint no-console: ["error", { allow: ["error"] }] */
   .catch(err => console.error(err));
